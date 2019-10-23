@@ -23,7 +23,7 @@ function init() {
     numbers.sort(function () { return Math.random() - .5 });
 
     for (var i = 0; i < numbers.length; i++) {
-        $('<div><img src="./img/' + numbers[i] + '.png" alt="" width="68px"></div>').data('number', numbers[i]).attr('id', 'card' + numbers[i]).appendTo('#cardPile').draggable({
+        $('<div><img src="./img/' + numbers[i] + '.png" alt="" width="100%"></div>').data('number', numbers[i]).attr('id', 'card' + numbers[i]).appendTo('#cardPile').draggable({
             containment: '#content',
             stack: '#cardPile div',
             cursor: 'move',
