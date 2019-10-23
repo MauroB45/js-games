@@ -23,7 +23,7 @@ function init() {
     numbers.sort(function () { return Math.random() - .5 });
 
     for (var i = 0; i < numbers.length; i++) {
-        $('<div>' + numbers[i] + '</div>').data('number', numbers[i]).attr('id', 'card' + numbers[i]).appendTo('#cardPile').draggable({
+        $('<div><img src="./img/' + numbers[i] + '.png" alt="" width="68px"></div>').data('number', numbers[i]).attr('id', 'card' + numbers[i]).appendTo('#cardPile').draggable({
             containment: '#content',
             stack: '#cardPile div',
             cursor: 'move',
@@ -69,7 +69,7 @@ function handleCardDrop(event, ui) {
     //If all the cards have been placed correctly then
     //display a message and reset the cards for
     //another go
-    if (correctCards === 10) {
+    if (correctCards === 4) {
         $('#successMessage').show();
         $('#successMessage').animate({
             left: '380px',
